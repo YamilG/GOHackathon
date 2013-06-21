@@ -1,7 +1,7 @@
 body {
 	background: #000115;
 	color: white;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: 1.6em;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 400;
@@ -9,6 +9,33 @@ body {
 
 .container {
 	margin-bottom: 50px;
+}
+
+.intro {
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+.q {
+	text-align: center;
+}
+
+.q p, .q h2 {
+	text-align: left;
+}
+
+.q img {
+	padding-right: 20px;
+	padding-bottom: 50px;
+	margin-top: 20px;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+.sponsor {
+	margin-right: 30px;
 }
 
 .nav-top {
@@ -21,7 +48,15 @@ body {
 .nav-top a {
 	text-decoration: none;
 	color: white;
+
+	transition:all 300ms;
 	-webkit-transition:all 300ms;
+}
+
+.row.line {
+	background-image: url('../img/line.png');
+	background-position: top center;
+	background-repeat: no-repeat;
 }
 
 .nav-top a:hover {
@@ -46,30 +81,43 @@ body {
 	padding: 20px;
 }
 
-.logo { 
-	background-color: red;
+.logo {
 	width: 650px;
 	height: 260px;
 }
 
 .demo-logo {
 	text-align: center;
+	padding-top: 30px;
 }
 
 p {
-	padding-left: 20px;
+	font-weight: 300;
+}
+
+a {
+	color: #50ece0;
+	font-weight: 500;
+}
+
+a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: #3604B3;
 }
 
 .q {
 	margin: 50px 0;
 }
 
+.span6 p, .span4 p {
+	padding: 0 10px;
+}
+
 .row h1 {
 	padding: 30px 0;
-	border-top:1px solid #3604B3;
-	border-bottom: 1px solid #3604B3;
+	padding-top: 40px;
 	text-align: center;
-	margin-bottom: 100px;
 	margin-top: 50px;
 }
 
@@ -79,16 +127,45 @@ h1, h2, h3, h4 {
 	margin: 10px 0;
 }
 
+.sponsors {
+	padding: 50px;
+}
+
+.sponsors a {
+	margin-right: 20px;
+}
+
+.sponsors a:last-child {
+	margin-right: 0px;
+}
+
+h2 {
+	font-size: 14px;
+}
+
+@keyframes STAR-MOVE {
+	from {
+		left: 0;
+		top: 0;
+	}
+	to {
+		left: -10000px;
+		top: -2000px;
+	}
+}
+
 @-webkit-keyframes STAR-MOVE {
 	from {
 		left: 0;
 		top: 0;
 	}
-	to { 
+	to {
 		left: -10000px;
 		top: -2000px;
 	}
 }
+
+
 
 #background {
 
@@ -97,7 +174,12 @@ h1, h2, h3, h4 {
 	top: 0; left: 0; right: 0; bottom: 0;
 	z-index: -300;
 	opacity: 0.2;
-	
+
+	animation-name: STAR-MOVE;
+	animation-duration: 200s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
 	-webkit-animation-name: STAR-MOVE;
 	-webkit-animation-duration: 200s;
 	-webkit-animation-timing-function: linear;
@@ -111,7 +193,12 @@ h1, h2, h3, h4 {
 	top: 0; left: 0; right: 0; bottom: 0;
 	z-index: -200;
 	opacity: 0.2;
-	
+
+	animation-name: STAR-MOVE;
+	animation-duration: 150s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
 	-webkit-animation-name: STAR-MOVE;
 	-webkit-animation-duration: 150s;
 	-webkit-animation-timing-function: linear;
@@ -124,7 +211,12 @@ h1, h2, h3, h4 {
 	top: 0; left: 0; right: 0; bottom: 0;
 	z-index: -100;
 	opacity: 0.1;
-	
+
+	animation-name: STAR-MOVE;
+	animation-duration: 100s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
 	-webkit-animation-name: STAR-MOVE;
 	-webkit-animation-duration: 100s;
 	-webkit-animation-timing-function: linear;
@@ -135,8 +227,7 @@ h1, h2, h3, h4 {
 .btn-ya {
 	background: rgb(206,11,165); /* Old browsers */
 	color: white;
-font-weight: 700;
-
+	font-weight: 700;
 	font-family: 'Roboto', sans-serif;
 	text-transform: uppercase;
 	text-shadow:none;
@@ -147,10 +238,34 @@ font-weight: 700;
 }
 
 h1 small {
-	font-size: 20px;
-	color: #999;
+	font-size: 17px;
+	color: #d9d9d9;
+	text-transform: none;
 }
 
 .btn-ya:hover {
 	background: #a809a8;
+	color: #50ece0;
+}
+
+#inscripcion {
+	width: 251px;
+	height: 52px;
+	background-image: url('../img/button.png');
+	display: inline-block;
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	text-shadow:none;
+	font-weight: bold;
+	font-size: 28px;
+	color: white;
+	padding-top: 30px;
+}
+
+#inscripcion:active {
+	background-image: url('../img/button_press.png');
+}
+
+.border {
+	border-bottom: 1px solid #17014e;
 }
